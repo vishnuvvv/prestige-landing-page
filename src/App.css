@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@400;600&display=swap');
+@import "tailwindcss";
+
+@keyframes marquee {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .animate-marquee {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 10s linear infinite;
+  }
+  
+  .highlight-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Highlighted state */
+  .highlight-card.highlight {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+  body {
+    font-family: "Playfair Display", serif;
+    color: #c9a76a; /* Luxury gold tone */
+  }
+
+/* WebKit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 8px; /* Adjust the width */
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.9); /* Keeps track transparent */
+}
+
+::-webkit-scrollbar-thumb {
+  background: black; /* Makes the scrollbar black */
+  border-radius: 4px; /* Rounded edges */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.8); /* Slightly lighter black on hover */
+}
